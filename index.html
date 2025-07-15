@@ -36,6 +36,9 @@
         }
         .animate-fade-in { animation: animate-fade-in 0.6s ease-out forwards; }
         .animate-fade-in-fast { animation: animate-fade-in-fast 0.3s ease-out forwards; }
+        .mobile-nav-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -44,10 +47,9 @@
 
     <script type="module">
         // --- DATA & TRANSLATIONS ---
-        // This is the central place for all text and file links.
         const projectData = {
             en: {
-                contact_whatsapp_number: '1234567890', // <-- REPLACE WITH YOUR WHATSAPP NUMBER
+                contact_whatsapp_number: '33767117091',
                 nav_home: 'Home',
                 nav_design: 'Design Selection',
                 nav_history: 'Project History',
@@ -83,7 +85,7 @@
                 history_item1_date: 'January 2024',
                 docs_title: 'Project Documents',
                 docs_desc: 'Download relevant drawings, quotations, and official documents.',
-                footer_text: '© 2024 British Embassy Renovation Project - Managed by MICHEAL HAMDY',
+                footer_text: '© 2024 British Embassy Renovation Project - Created by Joseph HAMDY KAMAL',
                 documents: [
                     { id: 1, title: 'Project Brief & Scope', file: 'https://placehold.co/project-brief.pdf', date: 'January 20, 2024' },
                 ],
@@ -101,7 +103,7 @@
                 }
             },
             ar: {
-                contact_whatsapp_number: '1234567890', // <-- REPLACE WITH YOUR WHATSAPP NUMBER
+                contact_whatsapp_number: '33767117091',
                 nav_home: 'الرئيسية',
                 nav_design: 'اختيار التصميم',
                 nav_history: 'تاريخ المشروع',
@@ -137,7 +139,7 @@
                 history_item1_date: 'يناير 2024',
                 docs_title: 'مستندات المشروع',
                 docs_desc: 'تنزيل المخططات وعروض الأسعار والمستندات الرسمية ذات الصلة.',
-                footer_text: '© 2024 مشروع تجديد السفارة البريطانية - إدارة مايكل حمدي',
+                footer_text: '© 2024 مشروع تجديد السفارة البريطانية - إنشاء جوزيف حمدي كمال',
                 documents: [
                     { id: 1, title: 'ملخص المشروع ونطاقه', file: 'https://placehold.co/project-brief.pdf', date: '20 يناير 2024' },
                 ],
@@ -176,12 +178,10 @@
         function renderApp() {
             const t = projectData[state.lang];
             
-            // Update document language and direction
             document.documentElement.lang = state.lang;
             document.documentElement.dir = state.lang === 'ar' ? 'rtl' : 'ltr';
             document.body.className = `bg-slate-50 ${state.lang === 'ar' ? 'font-cairo rtl' : 'font-inter'}`;
 
-            // Render all components
             root.innerHTML = `
                 <div class="relative z-10 min-h-screen flex flex-col">
                     ${Header(t)}
@@ -193,11 +193,10 @@
                 ${AnimatedBackground()}
                 ${ModalViewer(state.modalContent)}
                 ${ConfirmationModal(state.confirmation, t)}
+                ${MobileNav(t)}
             `;
             
-            // Re-attach all event listeners
             attachEventListeners(t);
-            // Re-create icons
             lucide.createIcons();
         }
 
@@ -209,13 +208,38 @@
                 setState({ lang: newLang });
             });
 
-            // Navigation
+            // Desktop Navigation
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     setState({ activeSection: link.dataset.section });
                 });
             });
+
+            // Mobile Navigation
+            const mobileNav = document.getElementById('mobile-nav');
+            const openMobileNavBtn = document.getElementById('mobile-menu-open-btn');
+            const closeMobileNavBtn = document.getElementById('mobile-menu-close-btn');
+            
+            openMobileNavBtn.addEventListener('click', () => {
+                mobileNav.classList.remove('hidden');
+                document.body.classList.add('mobile-nav-open');
+            });
+
+            closeMobileNavBtn.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+                document.body.classList.remove('mobile-nav-open');
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobileNav.classList.add('hidden');
+                    document.body.classList.remove('mobile-nav-open');
+                    setState({ activeSection: link.dataset.section });
+                });
+            });
+
 
             // Hero button
             const heroBtn = document.getElementById('hero-to-design-btn');
@@ -270,7 +294,7 @@
         // --- Component Templates (return HTML strings) ---
 
         const Header = (t) => `
-            <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200/80">
+            <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200/80">
                 <nav class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
                     <div class="font-bold text-lg text-blue-900">${t.hero_title}</div>
                     <div class="hidden md:flex items-center gap-2">
@@ -279,11 +303,32 @@
                         <a href="#" class="nav-link px-4 py-2 rounded-lg transition-all duration-300 font-medium ${state.activeSection === 'history' ? 'bg-blue-100 text-blue-900' : 'text-slate-500 hover:bg-slate-200/50'}" data-section="history">${t.nav_history}</a>
                         <a href="#" class="nav-link px-4 py-2 rounded-lg transition-all duration-300 font-medium ${state.activeSection === 'docs' ? 'bg-blue-100 text-blue-900' : 'text-slate-500 hover:bg-slate-200/50'}" data-section="docs">${t.nav_docs}</a>
                     </div>
-                    <button id="lang-toggle" class="bg-blue-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-900 transition text-sm active:scale-95">
-                        ${t.lang_toggle}
-                    </button>
+                    <div class="flex items-center gap-4">
+                        <button id="lang-toggle" class="bg-blue-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-900 transition text-sm active:scale-95">
+                            ${t.lang_toggle}
+                        </button>
+                        <button id="mobile-menu-open-btn" class="p-2 md:hidden">
+                            <i data-lucide="menu" class="w-6 h-6 text-slate-800"></i>
+                        </button>
+                    </div>
                 </nav>
             </header>
+        `;
+
+        const MobileNav = (t) => `
+            <div id="mobile-nav" class="hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50 animate-fade-in-fast">
+                <div class="flex justify-end p-4">
+                    <button id="mobile-menu-close-btn" class="p-2">
+                        <i data-lucide="x" class="w-8 h-8 text-slate-800"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col items-center justify-center gap-6 mt-16">
+                    <a href="#" class="mobile-nav-link text-2xl font-bold ${state.activeSection === 'home' ? 'text-blue-800' : 'text-slate-700'}" data-section="home">${t.nav_home}</a>
+                    <a href="#" class="mobile-nav-link text-2xl font-bold ${state.activeSection === 'design' ? 'text-blue-800' : 'text-slate-700'}" data-section="design">${t.nav_design}</a>
+                    <a href="#" class="mobile-nav-link text-2xl font-bold ${state.activeSection === 'history' ? 'text-blue-800' : 'text-slate-700'}" data-section="history">${t.nav_history}</a>
+                    <a href="#" class="mobile-nav-link text-2xl font-bold ${state.activeSection === 'docs' ? 'text-blue-800' : 'text-slate-700'}" data-section="docs">${t.nav_docs}</a>
+                </nav>
+            </div>
         `;
 
         const Footer = (t) => `
@@ -357,7 +402,7 @@
                         <p class="text-slate-500 leading-relaxed">${t.hero_desc}</p>
                         <div class="inline-block bg-white/70 backdrop-blur-sm p-4 rounded-lg border-l-4 border-blue-800">
                             <span class="text-slate-600">${t.project_manager}</span>
-                            <strong class="mx-2 text-blue-900 text-lg">MICHEAL HAMDY</strong>
+                            <strong class="mx-2 text-blue-900 text-lg">Joseph HAMDY KAMAL</strong>
                         </div>
                     </div>
                     <div class="space-y-4">
