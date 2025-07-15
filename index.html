@@ -63,8 +63,12 @@
                 home_card_villa: 'Villa Kitchen',
                 home_card_embassy: 'Embassy Kitchens',
                 home_card_bathroom: 'Bathroom Suite',
+                status_design_finished: 'Design Finished',
+                status_waiting_confirmation: 'Waiting Confirmation',
+                status_design_in_progress: 'Design in progress; will be finished soon.',
                 btn_view_designs: 'Proceed to Design Selection',
-                design_selection_title: 'Villa Kitchen: Design Selection',
+                design_selection_project_title: 'Project: Villa Kitchen',
+                design_selection_title: 'Design Selection',
                 design_selection_desc: 'Please review the two proposed designs for the villa kitchen. Your selection will determine the next steps for material choices and final quotation.',
                 design_option_a: 'Design Option A',
                 design_option_b: 'Design Option B',
@@ -84,6 +88,12 @@
                 history_item1_title: 'Project Initiation',
                 history_item1_desc: 'Initial consultation and requirements gathering.',
                 history_item1_date: 'January 2024',
+                history_item2_title: 'Site Measurements',
+                history_item2_desc: 'Site visit to take precise measurements for the villa, embassy kitchenette, and bathroom.',
+                history_item2_date: 'July 6, 2025',
+                history_item3_title: 'Villa Kitchen Design Finalized',
+                history_item3_desc: 'The design is complete and awaiting confirmation to proceed with material selection and quotation.',
+                history_item3_date: 'July 14, 2025',
                 docs_title: 'Project Documents',
                 docs_desc: 'Download relevant drawings, quotations, and official documents.',
                 doc_new_badge: 'New',
@@ -96,8 +106,8 @@
                 contact_michael_cta_whatsapp: 'Contact on WhatsApp',
                 contact_michael_cta_call: 'Call Now',
                 documents: [
-                    { id: 'doc001', title: 'Project Brief & Scope', file: 'https://placehold.co/project-brief.pdf', date: 'January 20, 2024' },
-                    { id: 'doc002', title: 'Quotation V1', file: 'https://placehold.co/quotation.pdf', date: 'July 15, 2024' }, // This is the new document
+                    { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: 'July 15, 2025' },
+                    { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: 'July 15, 2025' },
                 ],
                 villa_kitchen_designs: {
                     optionA: { 
@@ -127,8 +137,12 @@
                 home_card_villa: 'مطبخ الفيلا',
                 home_card_embassy: 'مطابخ السفارة',
                 home_card_bathroom: 'جناح الحمام',
+                status_design_finished: 'التصميم مكتمل',
+                status_waiting_confirmation: 'في انتظار التأكيد',
+                status_design_in_progress: 'التصميم قيد التنفيذ، سيتم الانتهاء منه قريباً.',
                 btn_view_designs: 'الانتقال إلى اختيار التصميم',
-                design_selection_title: 'مطبخ الفيلا: اختيار التصميم',
+                design_selection_project_title: 'المشروع: مطبخ الفيلا',
+                design_selection_title: 'اختيار التصميم',
                 design_selection_desc: 'يرجى مراجعة التصميمين المقترحين لمطبخ الفيلا. اختياركم سيحدد الخطوات التالية لاختيار المواد وعرض السعر النهائي.',
                 design_option_a: 'التصميم المقترح أ',
                 design_option_b: 'التصميم المقترح ب',
@@ -148,6 +162,12 @@
                 history_item1_title: 'انطلاق المشروع',
                 history_item1_desc: 'الاستشارة الأولية وجمع المتطلبات.',
                 history_item1_date: 'يناير 2024',
+                history_item2_title: 'أخذ المقاسات',
+                history_item2_desc: 'زيارة الموقع لأخذ المقاسات الدقيقة للفيلا ومطبخ السفارة والحمام.',
+                history_item2_date: '6 يوليو 2025',
+                history_item3_title: 'الانتهاء من تصميم مطبخ الفيلا',
+                history_item3_desc: 'اكتمل التصميم وفي انتظار التأكيد للمتابعة باختيار المواد وعرض الأسعار.',
+                history_item3_date: '14 يوليو 2025',
                 docs_title: 'مستندات المشروع',
                 docs_desc: 'تنزيل المخططات وعروض الأسعار والمستندات الرسمية ذات الصلة.',
                 doc_new_badge: 'جديد',
@@ -160,8 +180,8 @@
                 contact_michael_cta_whatsapp: 'تواصل على واتساب',
                 contact_michael_cta_call: 'اتصل الآن',
                 documents: [
-                    { id: 'doc001', title: 'ملخص المشروع ونطاقه', file: 'https://placehold.co/project-brief.pdf', date: '20 يناير 2024' },
-                    { id: 'doc002', title: 'عرض سعر V1', file: 'https://placehold.co/quotation.pdf', date: '15 يوليو 2024' },
+                    { id: 'villa_design_a_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح أ (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: '15 يوليو 2025' },
+                    { id: 'villa_design_b_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح ب (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: '15 يوليو 2025' },
                 ],
                 villa_kitchen_designs: {
                     optionA: { 
@@ -238,6 +258,15 @@
                     if (section === 'docs') {
                         markAllDocsAsViewed();
                     }
+                    setState({ activeSection: section });
+                });
+            });
+            
+            // Home page card navigation
+            document.querySelectorAll('.home-card-link').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const section = card.dataset.section;
                     setState({ activeSection: section });
                 });
             });
@@ -397,8 +426,6 @@
                 </div>`;
         };
 
-        const ProgressBar = (percentage) => `<div class="bg-slate-200 rounded-full h-2 overflow-hidden mb-2"><div class="bg-gradient-to-r from-blue-800 to-blue-500 h-full rounded-full transition-all duration-1000 ease-out" style="width: ${percentage}%"></div></div>`;
-
         const AnimatedBackground = () => `<div id="canvas-container" class="fixed top-0 left-0 -z-10 w-full h-full"></div>`;
 
         // --- Page Section Templates ---
@@ -436,9 +463,30 @@
                         </div>
                     </div>
                     <div class="lg:col-span-2 space-y-4">
-                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1"><div class="flex items-center gap-4 mb-3"><i data-lucide="home" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_villa}</h3></div>${ProgressBar(85)}<span class="font-semibold text-blue-800 text-sm">85%</span></div>
-                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1"><div class="flex items-center gap-4 mb-3"><i data-lucide="gantt-chart-square" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_embassy}</h3></div>${ProgressBar(60)}<span class="font-semibold text-blue-800 text-sm">60%</span></div>
-                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1"><div class="flex items-center gap-4 mb-3"><i data-lucide="forward" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_bathroom}</h3></div>${ProgressBar(40)}<span class="font-semibold text-blue-800 text-sm">40%</span></div>
+                        <div class="home-card-link bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1 cursor-pointer" data-section="design">
+                            <div class="flex items-center gap-4 mb-3">
+                                <i data-lucide="home" class="text-blue-800"></i>
+                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_villa}</h3>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span>
+                                <span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span>
+                            </div>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80">
+                            <div class="flex items-center gap-4 mb-3">
+                                <i data-lucide="gantt-chart-square" class="text-blue-800"></i>
+                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_embassy}</h3>
+                            </div>
+                            <p class="text-sm text-slate-500">${t.status_design_in_progress}</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80">
+                            <div class="flex items-center gap-4 mb-3">
+                                <i data-lucide="bath" class="text-blue-800"></i>
+                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_bathroom}</h3>
+                            </div>
+                            <p class="text-sm text-slate-500">${t.status_design_in_progress}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="text-center mt-16">
@@ -468,7 +516,11 @@
             };
             return `
                 <section id="design" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fade-in">
-                    <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-blue-900">${t.design_selection_title}</h2><p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">${t.design_selection_desc}</p></div>
+                    <div class="text-center mb-12">
+                        <h2 class="text-xl font-semibold text-blue-800 tracking-widest uppercase">${t.design_selection_project_title}</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">${t.design_selection_title}</h3>
+                        <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">${t.design_selection_desc}</p>
+                    </div>
                     <div class="grid lg:grid-cols-2 gap-8">${DesignCard('optionA', t.design_option_a)}${DesignCard('optionB', t.design_option_b)}</div>
                     ${state.finalSelection ? `<div class="mt-12 text-center max-w-2xl mx-auto p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border animate-fade-in"><h3 class="text-xl font-bold text-green-700">${t.next_step_materials}</h3><p class="mt-2 text-slate-600">${t.materials_desc}</p></div>` : ''}
                 </section>`;
@@ -479,7 +531,20 @@
                 <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-blue-900">${t.history_title}</h2><p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">${t.history_desc}</p></div>
                 <div class="relative max-w-2xl mx-auto">
                     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-800 to-blue-500 rtl:right-1/2 rtl:left-auto rtl:-translate-x-0 rtl:translate-x-1/2"></div>
-                    <div class="space-y-12"><div class="relative flex items-center gap-8"><div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="book-open" class="w-3.5 h-3.5 text-white"></i></div><div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item1_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item1_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item1_date}</span></div></div></div>
+                    <div class="space-y-12">
+                        <div class="relative flex items-center gap-8">
+                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="book-open" class="w-3.5 h-3.5 text-white"></i></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item3_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item3_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item3_date}</span></div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
+                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="ruler" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="clipboard-check" class="w-3.5 h-3.5 text-white"></i></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item1_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item1_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item1_date}</span></div>
+                        </div>
+                    </div>
                 </div>
             </section>`;
 
