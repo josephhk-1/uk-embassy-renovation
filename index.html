@@ -85,9 +85,6 @@
                 materials_desc: 'Thank you for your selection! We will contact you shortly to proceed with the material selection and finalize the project quotation.',
                 history_title: 'Project History',
                 history_desc: 'Our journey with the British Embassy renovation project.',
-                history_item1_title: 'Project Initiation',
-                history_item1_desc: 'Initial consultation and requirements gathering.',
-                history_item1_date: 'January 2024',
                 history_item2_title: 'Site Measurements',
                 history_item2_desc: 'Site visit to take precise measurements for the villa, embassy kitchenette, and bathroom.',
                 history_item2_date: 'July 6, 2025',
@@ -105,6 +102,7 @@
                 contact_michael_desc: 'Overall project management and responsibility:',
                 contact_michael_cta_whatsapp: 'Contact on WhatsApp',
                 contact_michael_cta_call: 'Call Now',
+                contact_michael_cta_card: 'View Digital Card',
                 documents: [
                     { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: 'July 15, 2025' },
                     { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: 'July 15, 2025' },
@@ -159,9 +157,6 @@
                 materials_desc: 'شكراً لاختياركم! سنتواصل معكم قريباً للمتابعة باختيار المواد ووضع اللمسات الأخيرة على عرض أسعار المشروع.',
                 history_title: 'تاريخ المشروع',
                 history_desc: 'رحلتنا مع مشروع تجديد السفارة البريطانية.',
-                history_item1_title: 'انطلاق المشروع',
-                history_item1_desc: 'الاستشارة الأولية وجمع المتطلبات.',
-                history_item1_date: 'يناير 2024',
                 history_item2_title: 'أخذ المقاسات',
                 history_item2_desc: 'زيارة الموقع لأخذ المقاسات الدقيقة للفيلا ومطبخ السفارة والحمام.',
                 history_item2_date: '6 يوليو 2025',
@@ -179,6 +174,7 @@
                 contact_michael_desc: 'الإدارة الشاملة للمشروع والمسؤولية:',
                 contact_michael_cta_whatsapp: 'تواصل على واتساب',
                 contact_michael_cta_call: 'اتصل الآن',
+                contact_michael_cta_card: 'عرض البطاقة الرقمية',
                 documents: [
                     { id: 'villa_design_a_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح أ (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: '15 يوليو 2025' },
                     { id: 'villa_design_b_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح ب (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: '15 يوليو 2025' },
@@ -451,6 +447,10 @@
                                         <span>${t.contact_michael_cta_call}</span>
                                     </a>
                                 </div>
+                                <a href="https://josephhk-1.github.io/Eng.michael-HAMDY-KAMAL/" target="_blank" class="mt-2 flex items-center justify-center gap-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-900 transition active:scale-95">
+                                    <i data-lucide="contact" class="w-4 h-4"></i>
+                                    <span>${t.contact_michael_cta_card}</span>
+                                </a>
                             </div>
                              <div class="bg-white/70 backdrop-blur-sm p-4 rounded-lg border-l-4 border-green-600 flex flex-col">
                                 <h3 class="font-bold text-green-800">${t.contact_joseph_title}</h3>
@@ -539,10 +539,6 @@
                         <div class="relative flex items-center gap-8">
                             <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
                             <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="ruler" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
-                        </div>
-                        <div class="relative flex items-center gap-8">
-                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="clipboard-check" class="w-3.5 h-3.5 text-white"></i></div>
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item1_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item1_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item1_date}</span></div>
                         </div>
                     </div>
                 </div>
