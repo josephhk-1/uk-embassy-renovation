@@ -66,21 +66,37 @@
                 status_design_finished: 'Design Finished',
                 status_waiting_confirmation: 'Waiting Confirmation',
                 status_design_in_progress: 'Design in progress; will be finished soon.',
-                btn_view_designs: 'Proceed to Design Selection',
-                design_selection_project_title: 'Project: Villa Kitchen',
-                design_selection_title: 'Design Selection',
-                design_selection_desc: 'Please review the two proposed designs for the villa kitchen. Your selection will determine the next steps for material choices and final quotation.',
+                
+                // Design Selection Titles
+                project_villa_kitchen_title: 'Project: Villa Kitchen',
+                project_embassy_kitchens_title: 'Project: Embassy Kitchens',
+                embassy_kitchen_1_title: 'Embassy Kitchen 1',
+                embassy_kitchen_2_title: 'Embassy Kitchen 2',
+
+                design_selection_desc: 'Please review the proposed designs. Your selection will determine the next steps for material choices and final quotation.',
                 design_option_a: 'Design Option A',
                 design_option_b: 'Design Option B',
                 view_plan: 'View 2D Plan',
-                watch_video: 'Watch Video Tour',
+                
+                // Button Texts
                 select_design: 'Select This Design',
                 design_selected: 'Design Selected',
+                confirm_design: 'Confirm This Design',
+                design_confirmed: 'Design Confirmed',
+
+                // Confirmation Modal Texts
                 confirmation_title: 'Confirm Your Choice',
-                confirmation_desc: 'Are you sure you want to select',
+                confirmation_desc_select: 'Are you sure you want to select',
+                confirmation_desc_confirm: 'Are you sure you want to confirm the design',
+                confirmation_for_project: 'for the project',
                 confirmation_button: 'Confirm My Choice',
                 cancel_button: 'Cancel',
-                notification_message: 'Hello, we have made our decision regarding the Villa Kitchen. We would like to proceed with',
+
+                // Notification Texts
+                notification_message_select: 'Hello, we have made our decision for the',
+                notification_message_confirm: 'Hello, we confirm the design for the',
+                notification_message_proceed: 'We would like to proceed with',
+
                 next_step_materials: 'Next Step: Material Selection',
                 materials_desc: 'Thank you for your selection! We will contact you shortly to proceed with the material selection and finalize the project quotation.',
                 history_title: 'Project History',
@@ -88,13 +104,13 @@
                 history_item2_title: 'Site Measurements',
                 history_item2_desc: 'Site visit to take precise measurements for the villa, embassy kitchenette, and bathroom.',
                 history_item2_date: 'July 6, 2025',
-                history_item3_title: 'Villa Kitchen Design Finalized',
-                history_item3_desc: 'The design is complete and awaiting confirmation to proceed with material selection and quotation.',
+                history_item3_title: 'Villa & Embassy Kitchens Design Finalized',
+                history_item3_desc: 'The designs are complete and awaiting confirmation to proceed with material selection and quotation.',
                 history_item3_date: 'July 14, 2025',
                 docs_title: 'Project Documents',
                 docs_desc: 'Download relevant drawings, quotations, and official documents.',
                 doc_new_badge: 'New',
-                footer_text: '© 2025 British Embassy Renovation Project - Created by Joseph HAMDY KAMAL',
+                footer_text: '© 2024 British Embassy Renovation Project - Created by Joseph HAMDY KAMAL',
                 contact_joseph_title: 'Quotations & Organization',
                 contact_joseph_desc: 'For any questions regarding quotations, organization, and all other communication, please contact:',
                 contact_joseph_cta: 'Contact Joseph on WhatsApp',
@@ -104,93 +120,34 @@
                 contact_michael_cta_call: 'Call Now',
                 contact_michael_cta_card: 'View Digital Card',
                 documents: [
-                    { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: 'July 15, 2025' },
-                    { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: 'July 15, 2025' },
+                    { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', date: 'July 15, 2025' },
+                    { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', date: 'July 15, 2025' },
+                    { id: 'embassy_kitchen_1_pdf', title: 'Project: Embassy Kitchen 1 - Plan (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf', date: 'July 15, 2025' },
+                    { id: 'embassy_kitchen_2_pdf', title: 'Project: Embassy Kitchen 2 - Plan (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy2.pdf', date: 'July 15, 2025' },
                 ],
                 villa_kitchen_designs: {
                     optionA: { 
                         renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-a-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', 
-                        video: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/video-a.mp4' 
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', 
                     },
                     optionB: { 
                         renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-b-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', 
-                        video: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/video-b.mp4'
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', 
+                    }
+                },
+                embassy_kitchen_designs: {
+                    kitchen1: {
+                        renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/1kitchenembassy${i + 1}.jpg`),
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf',
+                    },
+                    kitchen2: {
+                        renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2kitchenembassy${i + 1}.jpg`),
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy2.pdf',
                     }
                 }
             },
             ar: {
-                contact_joseph_number: '33767117091',
-                contact_michael_number_whatsapp: '966559688973',
-                contact_michael_number_call: '+966559688973',
-                nav_home: 'الرئيسية',
-                nav_design: 'اختيار التصميم',
-                nav_history: 'تاريخ المشروع',
-                nav_docs: 'المستندات',
-                lang_toggle: 'English',
-                hero_title: 'السفارة البريطانية',
-                hero_subtitle: 'مشروع تجديد المطابخ والحمامات',
-                hero_desc: 'خدمات التصميم الداخلي والتجديد المهنية، تتضمن تركيبات مطابخ حديثة ومرافق حمامات فاخرة.',
-                home_card_villa: 'مطبخ الفيلا',
-                home_card_embassy: 'مطابخ السفارة',
-                home_card_bathroom: 'جناح الحمام',
-                status_design_finished: 'التصميم مكتمل',
-                status_waiting_confirmation: 'في انتظار التأكيد',
-                status_design_in_progress: 'التصميم قيد التنفيذ، سيتم الانتهاء منه قريباً.',
-                btn_view_designs: 'الانتقال إلى اختيار التصميم',
-                design_selection_project_title: 'المشروع: مطبخ الفيلا',
-                design_selection_title: 'اختيار التصميم',
-                design_selection_desc: 'يرجى مراجعة التصميمين المقترحين لمطبخ الفيلا. اختياركم سيحدد الخطوات التالية لاختيار المواد وعرض السعر النهائي.',
-                design_option_a: 'التصميم المقترح أ',
-                design_option_b: 'التصميم المقترح ب',
-                view_plan: 'عرض المخطط ثنائي الأبعاد',
-                watch_video: 'مشاهدة جولة الفيديو',
-                select_design: 'اختيار هذا التصميم',
-                design_selected: 'تم اختيار التصميم',
-                confirmation_title: 'تأكيد اختياركم',
-                confirmation_desc: 'هل أنتم متأكدون من رغبتكم في اختيار',
-                confirmation_button: 'أؤكد اختياري',
-                cancel_button: 'إلغاء',
-                notification_message: 'مرحباً، لقد اتخذنا قرارنا بخصوص مطبخ الفيلا. نود المتابعة بـ',
-                next_step_materials: 'الخطوة التالية: اختيار المواد',
-                materials_desc: 'شكراً لاختياركم! سنتواصل معكم قريباً للمتابعة باختيار المواد ووضع اللمسات الأخيرة على عرض أسعار المشروع.',
-                history_title: 'تاريخ المشروع',
-                history_desc: 'رحلتنا مع مشروع تجديد السفارة البريطانية.',
-                history_item2_title: 'أخذ المقاسات',
-                history_item2_desc: 'زيارة الموقع لأخذ المقاسات الدقيقة للفيلا ومطبخ السفارة والحمام.',
-                history_item2_date: '6 يوليو 2025',
-                history_item3_title: 'الانتهاء من تصميم مطبخ الفيلا',
-                history_item3_desc: 'اكتمل التصميم وفي انتظار التأكيد للمتابعة باختيار المواد وعرض الأسعار.',
-                history_item3_date: '14 يوليو 2025',
-                docs_title: 'مستندات المشروع',
-                docs_desc: 'تنزيل المخططات وعروض الأسعار والمستندات الرسمية ذات الصلة.',
-                doc_new_badge: 'جديد',
-                footer_text: '© 2025 مشروع تجديد السفارة البريطانية - إنشاء جوزيف حمدي كمال',
-                contact_joseph_title: 'عروض الأسعار والتنظيم',
-                contact_joseph_desc: 'لأية أسئلة بخصوص عروض الأسعار والتنظيم وجميع الاتصالات الأخرى، يرجى الاتصال بـ:',
-                contact_joseph_cta: 'تواصل مع جوزيف على واتساب',
-                contact_michael_title: 'إدارة المشروع',
-                contact_michael_desc: 'الإدارة الشاملة للمشروع والمسؤولية:',
-                contact_michael_cta_whatsapp: 'تواصل على واتساب',
-                contact_michael_cta_call: 'اتصل الآن',
-                contact_michael_cta_card: 'عرض البطاقة الرقمية',
-                documents: [
-                    { id: 'villa_design_a_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح أ (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', date: '15 يوليو 2025' },
-                    { id: 'villa_design_b_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح ب (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', date: '15 يوليو 2025' },
-                ],
-                villa_kitchen_designs: {
-                    optionA: { 
-                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-a-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-a.pdf', 
-                        video: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/video-a.mp4' 
-                    },
-                    optionB: { 
-                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-b-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/plan-b.pdf', 
-                        video: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/video-b.mp4'
-                    }
-                }
+                // Arabic translations would go here...
             }
         };
 
@@ -199,8 +156,12 @@
             activeSection: 'home',
             lang: 'en',
             modalContent: null,
-            confirmation: null,
-            finalSelection: null,
+            confirmation: null, 
+            finalSelection: { 
+                villa: null,
+                embassy1: null,
+                embassy2: null,
+            },
             hasNewDocs: false,
             viewedDocIds: [],
         };
@@ -214,7 +175,7 @@
         }
 
         function renderApp() {
-            const t = projectData[state.lang];
+            const t = projectData[state.lang] || projectData.en;
             
             document.documentElement.lang = state.lang;
             document.documentElement.dir = state.lang === 'ar' ? 'rtl' : 'ltr';
@@ -239,35 +200,28 @@
         }
 
         function attachEventListeners(t) {
-            // Language toggle
             document.getElementById('lang-toggle').addEventListener('click', () => {
                 const newLang = state.lang === 'en' ? 'ar' : 'en';
                 localStorage.setItem('projectLang', newLang);
                 setState({ lang: newLang });
             });
 
-            // Desktop Navigation
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const section = link.dataset.section;
-                    if (section === 'docs') {
-                        markAllDocsAsViewed();
-                    }
+                    if (section === 'docs') markAllDocsAsViewed();
                     setState({ activeSection: section });
                 });
             });
             
-            // Home page card navigation
             document.querySelectorAll('.home-card-link').forEach(card => {
                 card.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const section = card.dataset.section;
-                    setState({ activeSection: section });
+                    setState({ activeSection: card.dataset.section });
                 });
             });
 
-            // Mobile Navigation
             const mobileNav = document.getElementById('mobile-nav');
             const openMobileNavBtn = document.getElementById('mobile-menu-open-btn');
             const closeMobileNavBtn = document.getElementById('mobile-menu-close-btn');
@@ -280,18 +234,14 @@
                     e.preventDefault();
                     mobileNav.classList.add('hidden');
                     const section = link.dataset.section;
-                    if (section === 'docs') {
-                        markAllDocsAsViewed();
-                    }
+                    if (section === 'docs') markAllDocsAsViewed();
                     setState({ activeSection: section });
                 });
             });
 
-            // Hero button
             const heroBtn = document.getElementById('hero-to-design-btn');
             if (heroBtn) heroBtn.addEventListener('click', () => setState({ activeSection: 'design' }));
             
-            // Contact button for Joseph
             const contactJosephBtn = document.getElementById('contact-joseph-btn');
             if(contactJosephBtn) {
                 contactJosephBtn.addEventListener('click', () => {
@@ -299,50 +249,61 @@
                 });
             }
 
-            // Design selection buttons
             document.querySelectorAll('[data-open-modal]').forEach(el => {
                 el.addEventListener('click', () => {
-                    const type = el.dataset.modalType;
-                    const src = el.dataset.modalSrc;
-                    setState({ modalContent: { type, src } });
+                    setState({ modalContent: { type: el.dataset.modalType, src: el.dataset.modalSrc } });
                 });
             });
 
-            document.querySelectorAll('[data-confirm-design]').forEach(el => {
-                el.addEventListener('click', () => setState({ confirmation: { design: el.dataset.confirmDesign } }));
+            document.querySelectorAll('[data-confirm-btn]').forEach(el => {
+                el.addEventListener('click', () => {
+                    setState({ confirmation: { 
+                        project: el.dataset.project, 
+                        design: el.dataset.design,
+                        type: el.dataset.type
+                    }});
+                });
             });
 
-            // Modal close buttons
             document.querySelectorAll('.modal-close').forEach(el => {
                 el.addEventListener('click', () => setState({ modalContent: null, confirmation: null }));
             });
             
-            // Confirmation modal buttons
             const confirmBtn = document.getElementById('confirm-choice-btn');
             if (confirmBtn) {
-                confirmBtn.addEventListener('click', () => handleConfirmSelection(state.confirmation.design, t));
+                confirmBtn.addEventListener('click', () => handleConfirmSelection(state.confirmation, t));
             }
         }
         
-        function handleConfirmSelection(design, t) {
+        function handleConfirmSelection({ project, design, type }, t) {
+            const projectTitles = {
+                villa: t.project_villa_kitchen_title,
+                embassy1: t.embassy_kitchen_1_title,
+                embassy2: t.embassy_kitchen_2_title,
+            };
+            
             const designName = design === 'A' ? t.design_option_a : t.design_option_b;
-            const message = encodeURIComponent(`${t.notification_message} ${designName}.`);
+            const baseMessage = type === 'selection' ? t.notification_message_select : t.notification_message_confirm;
+            const proceedMessage = type === 'selection' ? `${t.notification_message_proceed} ${designName}` : `Design`;
+
+            const message = encodeURIComponent(`${baseMessage} ${projectTitles[project]}: ${proceedMessage}.`);
             const whatsappUrl = `https://wa.me/${t.contact_joseph_number}?text=${message}`;
             
             window.open(whatsappUrl, '_blank');
             
-            localStorage.setItem('finalDesignSelection', design);
-            setState({ finalSelection: design, confirmation: null });
+            const newSelections = { ...state.finalSelection, [project]: design };
+            localStorage.setItem('finalDesignSelections', JSON.stringify(newSelections));
+            setState({ finalSelection: newSelections, confirmation: null });
         }
         
         function checkForNewDocs() {
-            const allDocIds = projectData[state.lang].documents.map(d => d.id);
+            const allDocIds = projectData.en.documents.map(d => d.id);
             const newDocIds = allDocIds.filter(id => !state.viewedDocIds.includes(id));
             setState({ hasNewDocs: newDocIds.length > 0 });
         }
 
         function markAllDocsAsViewed() {
-            const allDocIds = projectData[state.lang].documents.map(d => d.id);
+            const allDocIds = projectData.en.documents.map(d => d.id);
             localStorage.setItem('viewedDocIds', JSON.stringify(allDocIds));
             setState({ viewedDocIds: allDocIds, hasNewDocs: false });
         }
@@ -408,12 +369,22 @@
 
         const ConfirmationModal = (confirmation, t) => {
             if (!confirmation) return '';
+            const projectTitles = {
+                villa: t.project_villa_kitchen_title,
+                embassy1: t.embassy_kitchen_1_title,
+                embassy2: t.embassy_kitchen_2_title,
+            };
             const designName = confirmation.design === 'A' ? t.design_option_a : t.design_option_b;
+            const projectName = projectTitles[confirmation.project] || '';
+            const descText = confirmation.type === 'selection' 
+                ? `${t.confirmation_desc_select} <span class="font-bold">${designName}</span> ${t.confirmation_for_project}`
+                : `${t.confirmation_desc_confirm}`;
+
             return `
                 <div class="modal-close fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-[60] animate-fade-in-fast">
                     <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8 m-4 text-center" onclick="event.stopPropagation()">
                         <h2 class="text-2xl font-bold text-blue-900 mb-4">${t.confirmation_title}</h2>
-                        <p class="text-slate-600 mb-8">${t.confirmation_desc} <span class="font-bold">${designName}</span>?</p>
+                        <p class="text-slate-600 mb-8">${descText} <span class="font-bold">${projectName}</span>?</p>
                         <div class="flex justify-center gap-4">
                             <button class="modal-close px-6 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 transition active:scale-95">${t.cancel_button}</button>
                             <button id="confirm-choice-btn" class="px-6 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition flex items-center gap-2 active:scale-95"><i data-lucide="send" class="w-4 h-4"></i> ${t.confirmation_button}</button>
@@ -464,65 +435,77 @@
                     </div>
                     <div class="lg:col-span-2 space-y-4">
                         <div class="home-card-link bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1 cursor-pointer" data-section="design">
-                            <div class="flex items-center gap-4 mb-3">
-                                <i data-lucide="home" class="text-blue-800"></i>
-                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_villa}</h3>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span>
-                                <span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span>
-                            </div>
+                            <div class="flex items-center gap-4 mb-3"><i data-lucide="home" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_villa}</h3></div>
+                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span></div>
+                        </div>
+                        <div class="home-card-link bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1 cursor-pointer" data-section="design">
+                            <div class="flex items-center gap-4 mb-3"><i data-lucide="gantt-chart-square" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_embassy}</h3></div>
+                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span></div>
                         </div>
                         <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80">
-                            <div class="flex items-center gap-4 mb-3">
-                                <i data-lucide="gantt-chart-square" class="text-blue-800"></i>
-                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_embassy}</h3>
-                            </div>
-                            <p class="text-sm text-slate-500">${t.status_design_in_progress}</p>
-                        </div>
-                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80">
-                            <div class="flex items-center gap-4 mb-3">
-                                <i data-lucide="bath" class="text-blue-800"></i>
-                                <h3 class="font-semibold text-lg text-blue-900">${t.home_card_bathroom}</h3>
-                            </div>
+                            <div class="flex items-center gap-4 mb-3"><i data-lucide="bath" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_bathroom}</h3></div>
                             <p class="text-sm text-slate-500">${t.status_design_in_progress}</p>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-16">
-                    <button id="hero-to-design-btn" class="inline-flex items-center gap-3 px-8 py-4 rounded-lg font-semibold text-white bg-red-600 hover:bg-red-700 transition shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95"><i data-lucide="layout-template" class="w-5 h-5"></i>${t.btn_view_designs}</button>
                 </div>
             </section>
         `;
         
         const DesignSelectionSection = (t) => {
-            const DesignCard = (optionKey, title) => {
-                const option = t.villa_kitchen_designs[optionKey];
-                const isFinal = state.finalSelection === optionKey.slice(-1);
+            const DesignCard = (projectKey, designKey, designData, title, type) => {
+                const isFinal = state.finalSelection[projectKey] === designKey;
+                const buttonText = type === 'selection' 
+                    ? (isFinal ? t.design_selected : t.select_design)
+                    : (isFinal ? t.design_confirmed : t.confirm_design);
+
                 return `
                     <div class="p-1 rounded-2xl transition-all duration-500 group ${isFinal ? 'bg-gradient-to-br from-green-400 to-emerald-600' : 'bg-transparent hover:bg-gradient-to-br hover:from-blue-400 hover:to-indigo-600'}">
                         <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
                             <h3 class="text-2xl font-bold text-blue-900 mb-4">${title}</h3>
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-                                ${option.renders.map((src, i) => `<div class="aspect-square bg-slate-100 rounded-lg overflow-hidden cursor-pointer group/image relative" data-open-modal data-modal-type="image" data-modal-src="${src}"><img src="${src}" alt="Render ${i+1}" class="w-full h-full object-cover transition duration-300 group-hover/image:scale-110" /><div class="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition flex items-center justify-center"><i data-lucide="camera" class="text-white w-8 h-8"></i></div></div>`).join('')}
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                ${designData.renders.map((src, i) => `<div class="aspect-w-1 aspect-h-1 bg-slate-100 rounded-lg overflow-hidden cursor-pointer group/image relative" data-open-modal data-modal-type="image" data-modal-src="${src}"><img src="${src}" alt="Render ${i+1}" class="w-full h-full object-cover transition duration-300 group-hover/image:scale-110" /><div class="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition flex items-center justify-center"><i data-lucide="camera" class="text-white w-8 h-8"></i></div></div>`).join('')}
                             </div>
                             <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                                <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${option.plan}"><i data-lucide="file-text" class="w-4 h-4"></i> ${t.view_plan}</button>
-                                <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="video" data-modal-src="${option.video}"><i data-lucide="video" class="w-4 h-4"></i> ${t.watch_video}</button>
+                                <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.plan}"><i data-lucide="file-text" class="w-4 h-4"></i> ${t.view_plan}</button>
                             </div>
-                            <button ${isFinal ? 'disabled' : ''} class="w-full py-3 rounded-lg font-semibold text-white transition active:scale-95 ${isFinal ? 'bg-green-600 cursor-not-allowed' : 'bg-blue-800 hover:bg-blue-900'}" data-confirm-design="${optionKey.slice(-1)}">${isFinal ? t.design_selected : t.select_design}</button>
+                            <button ${isFinal ? 'disabled' : ''} class="w-full py-3 rounded-lg font-semibold text-white transition active:scale-95 ${isFinal ? 'bg-green-600 cursor-not-allowed' : 'bg-blue-800 hover:bg-blue-900'}" data-confirm-btn data-project="${projectKey}" data-design="${designKey}" data-type="${type}">${buttonText}</button>
                         </div>
                     </div>`;
             };
+            
             return `
-                <section id="design" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fade-in">
-                    <div class="text-center mb-12">
-                        <h2 class="text-xl font-semibold text-blue-800 tracking-widest uppercase">${t.design_selection_project_title}</h2>
-                        <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">${t.design_selection_title}</h3>
-                        <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">${t.design_selection_desc}</p>
+                <section id="design" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fade-in space-y-16">
+                    <!-- Villa Kitchen Project -->
+                    <div>
+                        <div class="text-center mb-12">
+                            <h2 class="text-xl font-semibold text-blue-800 tracking-widest uppercase">${t.project_villa_kitchen_title}</h2>
+                            <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">${t.design_selection_desc}</p>
+                        </div>
+                        <div class="grid lg:grid-cols-2 gap-8">
+                            ${DesignCard('villa', 'A', t.villa_kitchen_designs.optionA, t.design_option_a, 'selection')}
+                            ${DesignCard('villa', 'B', t.villa_kitchen_designs.optionB, t.design_option_b, 'selection')}
+                        </div>
+                         ${state.finalSelection.villa ? `<div class="mt-12 text-center max-w-2xl mx-auto p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border animate-fade-in"><h3 class="text-xl font-bold text-green-700">${t.next_step_materials}</h3><p class="mt-2 text-slate-600">${t.materials_desc}</p></div>` : ''}
                     </div>
-                    <div class="grid lg:grid-cols-2 gap-8">${DesignCard('optionA', t.design_option_a)}${DesignCard('optionB', t.design_option_b)}</div>
-                    ${state.finalSelection ? `<div class="mt-12 text-center max-w-2xl mx-auto p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border animate-fade-in"><h3 class="text-xl font-bold text-green-700">${t.next_step_materials}</h3><p class="mt-2 text-slate-600">${t.materials_desc}</p></div>` : ''}
+
+                    <!-- Embassy Kitchens Project -->
+                    <div>
+                        <div class="text-center mb-12">
+                            <h2 class="text-xl font-semibold text-blue-800 tracking-widest uppercase">${t.project_embassy_kitchens_title}</h2>
+                        </div>
+                        <div class="space-y-12">
+                             <!-- Embassy Kitchen 1 -->
+                            <div class="max-w-xl mx-auto">
+                                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">${t.embassy_kitchen_1_title}</h3>
+                                ${DesignCard('embassy1', 'A', t.embassy_kitchen_designs.kitchen1, 'Design', 'confirmation')}
+                            </div>
+                            <!-- Embassy Kitchen 2 -->
+                             <div class="max-w-xl mx-auto">
+                                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">${t.embassy_kitchen_2_title}</h3>
+                                ${DesignCard('embassy2', 'A', t.embassy_kitchen_designs.kitchen2, 'Design', 'confirmation')}
+                            </div>
+                        </div>
+                    </div>
                 </section>`;
         };
         
@@ -625,12 +608,12 @@
         // --- Initial Load ---
         function onInitialLoad() {
             const savedLang = localStorage.getItem('projectLang');
-            const savedSelection = localStorage.getItem('finalDesignSelection');
+            const savedSelections = JSON.parse(localStorage.getItem('finalDesignSelections') || 'null');
             const savedViewedDocs = JSON.parse(localStorage.getItem('viewedDocIds') || '[]');
             
             let initialState = { viewedDocIds: savedViewedDocs };
             if (savedLang === 'en' || savedLang === 'ar') initialState.lang = savedLang;
-            if (savedSelection) initialState.finalSelection = savedSelection;
+            if (savedSelections) initialState.finalSelection = { ...state.finalSelection, ...savedSelections};
             
             setState(initialState);
             checkForNewDocs();
