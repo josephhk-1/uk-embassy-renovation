@@ -61,17 +61,15 @@
                 hero_subtitle: 'Kitchen & Bathroom Renovation Project',
                 hero_desc: 'Professional interior design and renovation services, featuring modern kitchen installations and luxury bathroom facilities.',
                 home_card_villa: 'Villa Kitchen',
-                home_card_embassy: 'Embassy Kitchens',
+                home_card_embassy: 'Embassy Kitchen',
                 home_card_bathroom: 'Bathroom Suite',
-                status_design_finished: 'Design Finished',
-                status_waiting_confirmation: 'Waiting Confirmation',
+                status_design_confirmed: 'Design Confirmed',
+                status_waiting_materials: 'Waiting Material & Colors',
                 status_design_in_progress: 'Design in progress; will be finished soon.',
                 
                 // Design Selection Titles
                 project_villa_kitchen_title: 'Project: Villa Kitchen',
-                project_embassy_kitchens_title: 'Project: Embassy Kitchens',
-                embassy_kitchen_1_title: 'Embassy Kitchen 1',
-                embassy_kitchen_2_title: 'Embassy Kitchen 2',
+                project_embassy_kitchens_title: 'Project: Embassy Kitchen',
 
                 design_selection_desc: 'Please review the proposed designs. Your selection will determine the next steps for material choices and final quotation.',
                 design_option_a: 'Design Option A',
@@ -98,15 +96,18 @@
                 notification_message_proceed: 'We would like to proceed with',
 
                 next_step_materials: 'Next Step: Material Selection',
-                materials_desc: 'Thank you for your selection! We will contact you shortly to proceed with the material selection and finalize the project quotation.',
+                materials_desc: 'Thank you for your confirmation! The next step is to finalize material selections. We will contact you shortly to schedule a meeting.',
                 history_title: 'Project History',
                 history_desc: 'Our journey with the British Embassy renovation project.',
                 history_item2_title: 'Site Measurements',
                 history_item2_desc: 'Site visit to take precise measurements for the villa, embassy kitchenette, and bathroom.',
                 history_item2_date: 'July 6, 2025',
                 history_item3_title: 'Villa & Embassy Kitchens Design Finalized',
-                history_item3_desc: 'The designs are complete and awaiting confirmation to proceed with material selection and quotation.',
+                history_item3_desc: 'The initial designs for all kitchens are complete and presented for review.',
                 history_item3_date: 'July 14, 2025',
+                history_item4_title: 'Confirmation Received for Villa Kitchen',
+                history_item4_desc: 'Confirmation received by email for Option B. The next step is a meeting to finalize material selections for all projects to prepare detailed quotations.',
+                history_item4_date: 'July 17, 2025',
                 docs_title: 'Project Documents',
                 docs_desc: 'Download relevant drawings, quotations, and official documents.',
                 doc_new_badge: 'New',
@@ -122,8 +123,7 @@
                 documents: [
                     { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', date: 'July 15, 2025' },
                     { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', date: 'July 15, 2025' },
-                    { id: 'embassy_kitchen_1_pdf', title: 'Project: Embassy Kitchen 1 - Plan (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf', date: 'July 15, 2025' },
-                    { id: 'embassy_kitchen_2_pdf', title: 'Project: Embassy Kitchen 2 - Plan (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy2.pdf', date: 'July 15, 2025' },
+                    { id: 'embassy_kitchen_1_pdf', title: 'Project: Embassy Kitchen - Plan (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf', date: 'July 15, 2025' },
                 ],
                 villa_kitchen_designs: {
                     optionA: { 
@@ -139,15 +139,102 @@
                     kitchen1: {
                         renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/1kitchenembassy${i + 1}.jpg`),
                         plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf',
-                    },
-                    kitchen2: {
-                        renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2kitchenembassy${i + 1}.jpg`),
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy2.pdf',
                     }
                 }
             },
             ar: {
-                // Arabic translations would go here...
+                contact_joseph_number: '33767117091',
+                contact_michael_number_whatsapp: '966559688973',
+                contact_michael_number_call: '+966559688973',
+                nav_home: 'الرئيسية',
+                nav_design: 'اختيار التصميم',
+                nav_history: 'تاريخ المشروع',
+                nav_docs: 'المستندات',
+                lang_toggle: 'English',
+                hero_title: 'السفارة البريطانية',
+                hero_subtitle: 'مشروع تجديد المطبخ والحمامات',
+                hero_desc: 'خدمات تصميم داخلي وتجديد احترافية، تتميز بتركيبات مطابخ عصرية ومرافق حمامات فاخرة.',
+                home_card_villa: 'مطبخ الفيلا',
+                home_card_embassy: 'مطبخ السفارة',
+                home_card_bathroom: 'جناح الحمام',
+                status_design_confirmed: 'تم تأكيد التصميم',
+                status_waiting_materials: 'بانتظار المواد والألوان',
+                status_design_in_progress: 'التصميم قيد التنفيذ، سيتم الانتهاء منه قريباً.',
+                
+                // Design Selection Titles
+                project_villa_kitchen_title: 'مشروع: مطبخ الفيلا',
+                project_embassy_kitchens_title: 'مشروع: مطبخ السفارة',
+
+                design_selection_desc: 'يرجى مراجعة التصاميم المقترحة. اختياركم سيحدد الخطوات التالية لاختيار المواد وعرض السعر النهائي.',
+                design_option_a: 'تصميم مقترح أ',
+                design_option_b: 'تصميم مقترح ب',
+                view_plan: 'عرض المخطط ثنائي الأبعاد',
+                
+                // Button Texts
+                select_design: 'اختر هذا التصميم',
+                design_selected: 'تم اختيار التصميم',
+                confirm_design: 'تأكيد هذا التصميم',
+                design_confirmed: 'تم تأكيد التصميم',
+
+                // Confirmation Modal Texts
+                confirmation_title: 'تأكيد اختياركم',
+                confirmation_desc_select: 'هل أنت متأكد من رغبتك في اختيار',
+                confirmation_desc_confirm: 'هل أنت متأكد من رغبتك في تأكيد تصميم',
+                confirmation_for_project: 'لمشروع',
+                confirmation_button: 'أؤكد اختياري',
+                cancel_button: 'إلغاء',
+
+                // Notification Texts
+                notification_message_select: 'مرحباً، لقد اتخذنا قرارنا بخصوص',
+                notification_message_confirm: 'مرحباً، نؤكد التصميم الخاص بـ',
+                notification_message_proceed: 'نود المتابعة بـ',
+
+                next_step_materials: 'الخطوة التالية: اختيار المواد',
+                materials_desc: 'شكراً لتأكيدكم! الخطوة التالية هي الانتهاء من اختيار المواد. سنتصل بكم قريباً لتحديد موعد.',
+                history_title: 'تاريخ المشروع',
+                history_desc: 'رحلتنا مع مشروع تجديد السفارة البريطانية.',
+                history_item2_title: 'أخذ المقاسات في الموقع',
+                history_item2_desc: 'زيارة الموقع لأخذ المقاسات الدقيقة للفيلا والمطبخ الصغير بالسفارة والحمام.',
+                history_item2_date: '6 يوليو 2025',
+                history_item3_title: 'الانتهاء من تصميم مطابخ الفيلا والسفارة',
+                history_item3_desc: 'اكتملت التصاميم الأولية لجميع المطابخ وقُدمت للمراجعة.',
+                history_item3_date: '14 يوليو 2025',
+                history_item4_title: 'استلام تأكيد لمطبخ الفيلا',
+                history_item4_desc: 'تم استلام التأكيد عبر البريد الإلكتروني للخيار ب. الخطوة التالية هي اجتماع لوضع اللمسات الأخيرة على اختيار المواد لجميع المشاريع لإعداد عروض أسعار مفصلة.',
+                history_item4_date: '17 يوليو 2025',
+                docs_title: 'مستندات المشروع',
+                docs_desc: 'تنزيل المخططات وعروض الأسعار والمستندات الرسمية ذات الصلة.',
+                doc_new_badge: 'جديد',
+                footer_text: '© 2025 مشروع تجديد السفارة البريطانية - من إنشاء جوزيف حمدي كمال',
+                contact_joseph_title: 'عروض الأسعار والتنظيم',
+                contact_joseph_desc: 'لأية أسئلة بخصوص عروض الأسعار والتنظيم وجميع الاتصالات الأخرى، يرجى الاتصال بـ:',
+                contact_joseph_cta: 'تواصل مع جوزيف على واتساب',
+                contact_michael_title: 'إدارة المشروع',
+                contact_michael_desc: 'الإدارة الشاملة للمشروع والمسؤولية:',
+                contact_michael_cta_whatsapp: 'تواصل على واتساب',
+                contact_michael_cta_call: 'اتصل الآن',
+                contact_michael_cta_card: 'عرض البطاقة الرقمية',
+                documents: [
+                    { id: 'villa_design_a_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح أ (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', date: '15 يوليو 2025' },
+                    { id: 'villa_design_b_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح ب (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', date: '15 يوليو 2025' },
+                    { id: 'embassy_kitchen_1_pdf', title: 'مشروع: مطبخ السفارة - مخطط (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf', date: '15 يوليو 2025' },
+                ],
+                villa_kitchen_designs: {
+                    optionA: { 
+                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-a-${i + 1}.jpg`), 
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', 
+                    },
+                    optionB: { 
+                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-b-${i + 1}.jpg`), 
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', 
+                    }
+                },
+                embassy_kitchen_designs: {
+                    kitchen1: {
+                        renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/1kitchenembassy${i + 1}.jpg`),
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf',
+                    }
+                }
             }
         };
 
@@ -158,9 +245,8 @@
             modalContent: null,
             confirmation: null, 
             finalSelection: { 
-                villa: null,
-                embassy1: null,
-                embassy2: null,
+                villa: 'B', // Pre-confirmed
+                embassy1: 'A', // Pre-confirmed
             },
             hasNewDocs: false,
             viewedDocIds: [],
@@ -256,6 +342,7 @@
             });
 
             document.querySelectorAll('[data-confirm-btn]').forEach(el => {
+                if (el.disabled) return;
                 el.addEventListener('click', () => {
                     setState({ confirmation: { 
                         project: el.dataset.project, 
@@ -278,8 +365,7 @@
         function handleConfirmSelection({ project, design, type }, t) {
             const projectTitles = {
                 villa: t.project_villa_kitchen_title,
-                embassy1: t.embassy_kitchen_1_title,
-                embassy2: t.embassy_kitchen_2_title,
+                embassy1: t.project_embassy_kitchens_title,
             };
             
             const designName = design === 'A' ? t.design_option_a : t.design_option_b;
@@ -371,8 +457,7 @@
             if (!confirmation) return '';
             const projectTitles = {
                 villa: t.project_villa_kitchen_title,
-                embassy1: t.embassy_kitchen_1_title,
-                embassy2: t.embassy_kitchen_2_title,
+                embassy1: t.project_embassy_kitchens_title,
             };
             const designName = confirmation.design === 'A' ? t.design_option_a : t.design_option_b;
             const projectName = projectTitles[confirmation.project] || '';
@@ -436,11 +521,11 @@
                     <div class="lg:col-span-2 space-y-4">
                         <div class="home-card-link bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1 cursor-pointer" data-section="design">
                             <div class="flex items-center gap-4 mb-3"><i data-lucide="home" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_villa}</h3></div>
-                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span></div>
+                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_confirmed}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_materials}</span></div>
                         </div>
                         <div class="home-card-link bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80 transition hover:shadow-xl hover:-translate-y-1 cursor-pointer" data-section="design">
                             <div class="flex items-center gap-4 mb-3"><i data-lucide="gantt-chart-square" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_embassy}</h3></div>
-                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_finished}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_confirmation}</span></div>
+                            <div class="flex items-center gap-2 flex-wrap"><span class="text-xs font-semibold text-white bg-green-500 px-2 py-1 rounded-full">${t.status_design_confirmed}</span><span class="text-xs font-semibold text-white bg-amber-500 px-2 py-1 rounded-full">${t.status_waiting_materials}</span></div>
                         </div>
                         <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/80">
                             <div class="flex items-center gap-4 mb-3"><i data-lucide="bath" class="text-blue-800"></i><h3 class="font-semibold text-lg text-blue-900">${t.home_card_bathroom}</h3></div>
@@ -453,13 +538,28 @@
         
         const DesignSelectionSection = (t) => {
             const DesignCard = (projectKey, designKey, designData, title, type) => {
-                const isFinal = state.finalSelection[projectKey] === designKey;
+                const projectIsDecided = state.finalSelection[projectKey] !== null;
+                const isFinal = projectIsDecided && state.finalSelection[projectKey] === designKey;
+
                 const buttonText = type === 'selection' 
                     ? (isFinal ? t.design_selected : t.select_design)
                     : (isFinal ? t.design_confirmed : t.confirm_design);
+                
+                let buttonClass = 'bg-blue-800 hover:bg-blue-900';
+                if (projectIsDecided) {
+                    if (isFinal) {
+                        buttonClass = 'bg-green-600 cursor-not-allowed';
+                    } else {
+                        buttonClass = 'bg-slate-400 cursor-not-allowed';
+                    }
+                }
+
+                const cardWrapperClass = isFinal 
+                    ? 'bg-gradient-to-br from-green-400 to-emerald-600' 
+                    : (projectIsDecided ? 'bg-transparent opacity-60' : 'bg-transparent hover:bg-gradient-to-br hover:from-blue-400 hover:to-indigo-600');
 
                 return `
-                    <div class="p-1 rounded-2xl transition-all duration-500 group ${isFinal ? 'bg-gradient-to-br from-green-400 to-emerald-600' : 'bg-transparent hover:bg-gradient-to-br hover:from-blue-400 hover:to-indigo-600'}">
+                    <div class="p-1 rounded-2xl transition-all duration-500 group ${cardWrapperClass}">
                         <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
                             <h3 class="text-2xl font-bold text-blue-900 mb-4">${title}</h3>
                             <div class="grid grid-cols-3 gap-4 mb-6">
@@ -468,7 +568,7 @@
                             <div class="flex flex-col sm:flex-row gap-4 mb-6">
                                 <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.plan}"><i data-lucide="file-text" class="w-4 h-4"></i> ${t.view_plan}</button>
                             </div>
-                            <button ${isFinal ? 'disabled' : ''} class="w-full py-3 rounded-lg font-semibold text-white transition active:scale-95 ${isFinal ? 'bg-green-600 cursor-not-allowed' : 'bg-blue-800 hover:bg-blue-900'}" data-confirm-btn data-project="${projectKey}" data-design="${designKey}" data-type="${type}">${buttonText}</button>
+                            <button ${projectIsDecided ? 'disabled' : ''} class="w-full py-3 rounded-lg font-semibold text-white transition active:scale-95 ${buttonClass}" data-confirm-btn data-project="${projectKey}" data-design="${designKey}" data-type="${type}">${buttonText}</button>
                         </div>
                     </div>`;
             };
@@ -494,15 +594,8 @@
                             <h2 class="text-xl font-semibold text-blue-800 tracking-widest uppercase">${t.project_embassy_kitchens_title}</h2>
                         </div>
                         <div class="space-y-12">
-                             <!-- Embassy Kitchen 1 -->
-                            <div class="max-w-xl mx-auto">
-                                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">${t.embassy_kitchen_1_title}</h3>
-                                ${DesignCard('embassy1', 'A', t.embassy_kitchen_designs.kitchen1, 'Design', 'confirmation')}
-                            </div>
-                            <!-- Embassy Kitchen 2 -->
                              <div class="max-w-xl mx-auto">
-                                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">${t.embassy_kitchen_2_title}</h3>
-                                ${DesignCard('embassy2', 'A', t.embassy_kitchen_designs.kitchen2, 'Design', 'confirmation')}
+                                ${DesignCard('embassy1', 'A', t.embassy_kitchen_designs.kitchen1, 'Design', 'confirmation')}
                             </div>
                         </div>
                     </div>
@@ -515,12 +608,16 @@
                 <div class="relative max-w-2xl mx-auto">
                     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-800 to-blue-500 rtl:right-1/2 rtl:left-auto rtl:-translate-x-0 rtl:translate-x-1/2"></div>
                     <div class="space-y-12">
+                         <div class="relative flex items-center gap-8">
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item4_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item4_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item4_date}</span></div>
+                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="mail-check" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
+                        </div>
                         <div class="relative flex items-center gap-8">
                             <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="book-open" class="w-3.5 h-3.5 text-white"></i></div>
                             <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item3_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item3_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item3_date}</span></div>
                         </div>
                         <div class="relative flex items-center gap-8">
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
                             <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="ruler" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
                         </div>
                     </div>
@@ -613,7 +710,9 @@
             
             let initialState = { viewedDocIds: savedViewedDocs };
             if (savedLang === 'en' || savedLang === 'ar') initialState.lang = savedLang;
-            if (savedSelections) initialState.finalSelection = { ...state.finalSelection, ...savedSelections};
+            
+            // Override with pre-confirmed state, but allow saved selections to persist if they exist
+            initialState.finalSelection = { ...state.finalSelection, ...savedSelections };
             
             setState(initialState);
             checkForNewDocs();
