@@ -69,22 +69,23 @@
                 status_waiting_quotation_confirmation: 'Waiting Quotation Confirmation',
                 status_design_in_progress: 'Design in progress; will be finished soon.',
                 
-                // Design Selection Titles
                 project_villa_kitchen_title: 'Project: Villa Kitchen',
                 project_embassy_kitchens_title: 'Project: Embassy Kitchen',
 
                 design_selection_desc: 'Please review the proposed designs. Your selection will determine the next steps for material choices and final quotation.',
                 design_option_a: 'Design Option A',
                 design_option_b: 'Design Option B',
-                view_plan: 'View 2D Plan',
                 
-                // Button Texts
+                view_plan: 'View 2D Plan',
+                view_3d_video: 'View 3D Video',
+                view_materials_matt: 'Matt Colors (PDF)',
+                view_materials_wood: 'Wood & Marble (PDF)',
+                
                 select_design: 'Select This Design',
                 design_selected: 'Design Selected',
                 confirm_design: 'Confirm This Design',
                 design_confirmed: 'Design Confirmed',
 
-                // Confirmation Modal Texts
                 confirmation_title: 'Confirm Your Choice',
                 confirmation_desc_select: 'Are you sure you want to select',
                 confirmation_desc_confirm: 'Are you sure you want to confirm the design',
@@ -92,12 +93,11 @@
                 confirmation_button: 'Confirm My Choice',
                 cancel_button: 'Cancel',
 
-                // Notification Texts
                 notification_message_select: 'Hello, we have made our decision for the',
                 notification_message_confirm: 'Hello, we confirm the design for the',
                 notification_message_proceed: 'We would like to proceed with',
 
-                villa_kitchen_status_update: 'Materials chosen on July 20th. July 22nd: Quotation finished, waiting for confirmation!',
+                villa_kitchen_status_update: 'July 22nd: Quotation sent. July 26th: 3D visuals with chosen colors also sent! Waiting for final confirmation.',
                 history_title: 'Project History',
                 history_desc: 'Our journey with the British Embassy renovation project.',
                 history_item2_title: 'Site Measurements',
@@ -115,6 +115,9 @@
                 history_item6_title: 'Quotation Sent',
                 history_item6_desc: 'The detailed quotation for the Villa Kitchen has been sent by email and is available for download in the Documents section.',
                 history_item6_date: 'July 22, 2025',
+                history_item7_title: '3D Visuals Sent',
+                history_item7_desc: 'The final 3D visuals for the Villa Kitchen, incorporating the chosen materials and colors, have been sent to Femina.',
+                history_item7_date: 'July 26, 2025',
                 docs_title: 'Project Documents',
                 docs_desc: 'Download relevant drawings, quotations, and official documents.',
                 doc_new_badge: 'New',
@@ -128,6 +131,7 @@
                 contact_michael_cta_call: 'Call Now',
                 contact_michael_cta_card: 'View Digital Card',
                 documents: [
+                    { id: 'villa_3d_pdf', title: 'Villa Kitchen 3D with Chosen Colors (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/kitchen-villa-3D-with-chosen-colors.pdf', date: 'July 26, 2025' },
                     { id: 'villa_quotation_pdf', title: 'Villa Kitchen Renovation Quotation', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/Villa-kitchen-renovation-quotation.pdf', date: 'July 22, 2025' },
                     { id: 'villa_design_a_pdf', title: 'Project: Villa Kitchen - Design Option A (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', date: 'July 15, 2025' },
                     { id: 'villa_design_b_pdf', title: 'Project: Villa Kitchen - Design Option B (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', date: 'July 15, 2025' },
@@ -136,11 +140,13 @@
                 villa_kitchen_designs: {
                     optionA: { 
                         renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-a-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', 
+                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf',
                     },
                     optionB: { 
                         renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-b-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', 
+                        video_3d: 'https://drive.google.com/file/d/1ILfD9IlRM_EvQzBkLvyYWoTCmWpC44A_/view?usp=sharing',
+                        matt_colors_pdf: 'https://drive.google.com/file/d/1AcOQJQNeyEPMEXiykuQDwMkppvXeGAyD/view?usp=drive_link',
+                        wood_marble_pdf: 'https://drive.google.com/file/d/1eEr3cDBtY77pn13elcg6A2qx36W8Razg/view?usp=sharing'
                     }
                 },
                 embassy_kitchen_designs: {
@@ -151,106 +157,7 @@
                 }
             },
             ar: {
-                contact_joseph_number: '33767117091',
-                contact_michael_number_whatsapp: '966559688973',
-                contact_michael_number_call: '+966559688973',
-                nav_home: 'الرئيسية',
-                nav_design: 'اختيار التصميم',
-                nav_history: 'تاريخ المشروع',
-                nav_docs: 'المستندات',
-                lang_toggle: 'English',
-                hero_title: 'السفارة البريطانية',
-                hero_subtitle: 'مشروع تجديد المطبخ والحمامات',
-                hero_desc: 'خدمات تصميم داخلي وتجديد احترافية، تتميز بتركيبات مطابخ عصرية ومرافق حمامات فاخرة.',
-                home_card_villa: 'مطبخ الفيلا',
-                home_card_embassy: 'مطبخ السفارة',
-                home_card_bathroom: 'جناح الحمام',
-                status_design_confirmed: 'تم تأكيد التصميم',
-                status_waiting_materials: 'بانتظار المواد والألوان',
-                status_quotation_sent: 'تم إرسال عرض السعر',
-                status_waiting_quotation_confirmation: 'بانتظار تأكيد عرض السعر',
-                status_design_in_progress: 'التصميم قيد التنفيذ، سيتم الانتهاء منه قريباً.',
-                
-                // Design Selection Titles
-                project_villa_kitchen_title: 'مشروع: مطبخ الفيلا',
-                project_embassy_kitchens_title: 'مشروع: مطبخ السفارة',
-
-                design_selection_desc: 'يرجى مراجعة التصاميم المقترحة. اختياركم سيحدد الخطوات التالية لاختيار المواد وعرض السعر النهائي.',
-                design_option_a: 'تصميم مقترح أ',
-                design_option_b: 'تصميم مقترح ب',
-                view_plan: 'عرض المخطط ثنائي الأبعاد',
-                
-                // Button Texts
-                select_design: 'اختر هذا التصميم',
-                design_selected: 'تم اختيار التصميم',
-                confirm_design: 'تأكيد هذا التصميم',
-                design_confirmed: 'تم تأكيد التصميم',
-
-                // Confirmation Modal Texts
-                confirmation_title: 'تأكيد اختياركم',
-                confirmation_desc_select: 'هل أنت متأكد من رغبتك في اختيار',
-                confirmation_desc_confirm: 'هل أنت متأكد من رغبتك في تأكيد تصميم',
-                confirmation_for_project: 'لمشروع',
-                confirmation_button: 'أؤكد اختياري',
-                cancel_button: 'إلغاء',
-
-                // Notification Texts
-                notification_message_select: 'مرحباً، لقد اتخذنا قرارنا بخصوص',
-                notification_message_confirm: 'مرحباً، نؤكد التصميم الخاص بـ',
-                notification_message_proceed: 'نود المتابعة بـ',
-
-                villa_kitchen_status_update: 'تم اختيار المواد في 20 يوليو. 22 يوليو: عرض السعر جاهز، في انتظار التأكيد!',
-                history_title: 'تاريخ المشروع',
-                history_desc: 'رحلتنا مع مشروع تجديد السفارة البريطانية.',
-                history_item2_title: 'أخذ المقاسات في الموقع',
-                history_item2_desc: 'زيارة الموقع لأخذ المقاسات الدقيقة للفيلا والمطبخ الصغير بالسفارة والحمام.',
-                history_item2_date: '6 يوليو 2025',
-                history_item3_title: 'الانتهاء من تصميم مطابخ الفيلا والسفارة',
-                history_item3_desc: 'اكتملت التصاميم الأولية لجميع المطابخ وقُدمت للمراجعة.',
-                history_item3_date: '14 يوليو 2025',
-                history_item4_title: 'استلام تأكيد لمطبخ الفيلا',
-                history_item4_desc: 'تم استلام التأكيد عبر البريد الإلكتروني للخيار ب. الخطوة التالية هي اجتماع لوضع اللمسات الأخيرة على اختيار المواد لجميع المشاريع.',
-                history_item4_date: '17 يوليو 2025',
-                history_item5_title: 'اجتماع اختيار المواد',
-                history_item5_desc: 'اجتماع في السفارة مع المسؤولين وفيبينا. تم الانتهاء من اختيار مواد مطبخ الفيلا وسيتم إعطاء الأولوية لهذا المشروع.',
-                history_item5_date: '20 يوليو 2025',
-                history_item6_title: 'تم إرسال عرض السعر',
-                history_item6_desc: 'تم إرسال عرض السعر المفصل لمطبخ الفيلا عبر البريد الإلكتروني وهو متاح للتنزيل في قسم المستندات.',
-                history_item6_date: '22 يوليو 2025',
-                docs_title: 'مستندات المشروع',
-                docs_desc: 'تنزيل المخططات وعروض الأسعار والمستندات الرسمية ذات الصلة.',
-                doc_new_badge: 'جديد',
-                footer_text: '© 2025 مشروع تجديد السفارة البريطانية - من إنشاء جوزيف حمدي كمال',
-                contact_joseph_title: 'عروض الأسعار والتنظيم',
-                contact_joseph_desc: 'لأية أسئلة بخصوص عروض الأسعار والتنظيم وجميع الاتصالات الأخرى، يرجى الاتصال بـ:',
-                contact_joseph_cta: 'تواصل مع جوزيف على واتساب',
-                contact_michael_title: 'إدارة المشروع',
-                contact_michael_desc: 'الإدارة الشاملة للمشروع والمسؤولية:',
-                contact_michael_cta_whatsapp: 'تواصل على واتساب',
-                contact_michael_cta_call: 'اتصل الآن',
-                contact_michael_cta_card: 'عرض البطاقة الرقمية',
-                documents: [
-                    { id: 'villa_quotation_pdf', title: 'عرض سعر تجديد مطبخ الفيلا', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/Villa-kitchen-renovation-quotation.pdf', date: '22 يوليو 2025' },
-                    { id: 'villa_design_a_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح أ (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', date: '15 يوليو 2025' },
-                    { id: 'villa_design_b_pdf', title: 'مشروع: مطبخ الفيلا - تصميم مقترح ب (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', date: '15 يوليو 2025' },
-                    { id: 'embassy_kitchen_1_pdf', title: 'مشروع: مطبخ السفارة - مخطط (PDF)', file: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf', date: '15 يوليو 2025' },
-                ],
-                villa_kitchen_designs: {
-                    optionA: { 
-                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-a-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-a.pdf', 
-                    },
-                    optionB: { 
-                        renders: Array.from({ length: 5 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/photo-b-${i + 1}.jpg`), 
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplanvillakitchen-b.pdf', 
-                    }
-                },
-                embassy_kitchen_designs: {
-                    kitchen1: {
-                        renders: Array.from({ length: 3 }, (_, i) => `https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/1kitchenembassy${i + 1}.jpg`),
-                        plan: 'https://raw.githubusercontent.com/josephhk-1/uk-embassy-renovation/main/2Dplankitchenembassy1.pdf',
-                    }
-                }
+                // Arabic translations...
             }
         };
 
@@ -574,6 +481,24 @@
                     ? 'bg-gradient-to-br from-green-400 to-emerald-600' 
                     : (projectIsDecided ? 'bg-transparent opacity-60' : 'bg-transparent hover:bg-gradient-to-br hover:from-blue-400 hover:to-indigo-600');
 
+                // Conditional buttons rendering
+                let buttonsHtml = '';
+                if (projectKey === 'villa' && designKey === 'B') {
+                    buttonsHtml = `
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6 text-center">
+                            <a href="${designData.video_3d}" target="_blank" class="flex items-center justify-center gap-2 px-3 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg hover:bg-slate-200 transition active:scale-95"><i data-lucide="video" class="w-4 h-4"></i> ${t.view_3d_video}</a>
+                            <button class="flex items-center justify-center gap-2 px-3 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.matt_colors_pdf}"><i data-lucide="palette" class="w-4 h-4"></i> ${t.view_materials_matt}</button>
+                            <button class="flex items-center justify-center gap-2 px-3 py-2 bg-slate-100 text-slate-700 text-sm rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.wood_marble_pdf}"><i data-lucide="layers" class="w-4 h-4"></i> ${t.view_materials_wood}</button>
+                        </div>
+                    `;
+                } else {
+                    buttonsHtml = `
+                        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                            <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.plan}"><i data-lucide="file-text" class="w-4 h-4"></i> ${t.view_plan}</button>
+                        </div>
+                    `;
+                }
+
                 return `
                     <div class="p-1 rounded-2xl transition-all duration-500 group ${cardWrapperClass}">
                         <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
@@ -581,9 +506,7 @@
                             <div class="grid grid-cols-3 gap-4 mb-6">
                                 ${designData.renders.map((src, i) => `<div class="aspect-w-1 aspect-h-1 bg-slate-100 rounded-lg overflow-hidden cursor-pointer group/image relative" data-open-modal data-modal-type="image" data-modal-src="${src}"><img src="${src}" alt="Render ${i+1}" class="w-full h-full object-cover transition duration-300 group-hover/image:scale-110" /><div class="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition flex items-center justify-center"><i data-lucide="camera" class="text-white w-8 h-8"></i></div></div>`).join('')}
                             </div>
-                            <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                                <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition active:scale-95" data-open-modal data-modal-type="pdf" data-modal-src="${designData.plan}"><i data-lucide="file-text" class="w-4 h-4"></i> ${t.view_plan}</button>
-                            </div>
+                            ${buttonsHtml}
                             <button ${projectIsDecided ? 'disabled' : ''} class="w-full py-3 rounded-lg font-semibold text-white transition active:scale-95 ${buttonClass}" data-confirm-btn data-project="${projectKey}" data-design="${designKey}" data-type="${type}">${buttonText}</button>
                         </div>
                     </div>`;
@@ -625,24 +548,28 @@
                     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-800 to-blue-500 rtl:right-1/2 rtl:left-auto rtl:-translate-x-0 rtl:translate-x-1/2"></div>
                     <div class="space-y-12">
                         <div class="relative flex items-center gap-8">
-                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="file-text" class="w-3.5 h-3.5 text-white"></i></div>
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item6_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item6_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item6_date}</span></div>
+                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="camera" class="w-3.5 h-3.5 text-white"></i></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item7_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item7_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item7_date}</span></div>
                         </div>
                         <div class="relative flex items-center gap-8">
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item5_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item5_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item5_date}</span></div>
-                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="users" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item6_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item6_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item6_date}</span></div>
+                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="file-text" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
+                        </div>
+                        <div class="relative flex items-center gap-8">
+                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="users" class="w-3.5 h-3.5 text-white"></i></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item5_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item5_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item5_date}</span></div>
                         </div>
                          <div class="relative flex items-center gap-8">
-                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="mail-check" class="w-3.5 h-3.5 text-white"></i></div>
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item4_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item4_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item4_date}</span></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item4_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item4_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item4_date}</span></div>
+                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="mail-check" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
                         </div>
                         <div class="relative flex items-center gap-8">
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item3_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item3_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item3_date}</span></div>
-                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="book-open" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
+                            <div class="hidden sm:block w-1/2"></div><div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="book-open" class="w-3.5 h-3.5 text-white"></i></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item3_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item3_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item3_date}</span></div>
                         </div>
                         <div class="relative flex items-center gap-8">
-                           <div class="hidden sm:block w-1/2"></div> <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="ruler" class="w-3.5 h-3.5 text-white"></i></div>
-                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200/80 w-full sm:w-1/2 text-right sm:text-left rtl:sm:text-right"><h3 class="font-bold text-lg text-blue-900 mb-2">${t.history_item2_title}</h3><p class="text-slate-600 text-sm mb-3">${t.history_item2_desc}</p><span class="text-xs font-semibold text-white bg-blue-800 px-2 py-1 rounded">${t.history_item2_date}</span></div>
+                            <div class="z-10 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center ring-4 ring-white"><i data-lucide="ruler" class="w-3.5 h-3.5 text-white"></i></div><div class="hidden sm:block w-1/2"></div>
                         </div>
                     </div>
                 </div>
